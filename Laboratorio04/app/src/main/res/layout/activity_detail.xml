@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/contactImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@drawable/mario"
+        android:contentDescription="@string/contact_image_desc"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/contactImageView"
+        app:layout_constraintTop_toTopOf="@+id/contactImageView"
+        tools:text="Nombre Completo" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/contactImageView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        tools:text="example@example.com" />
+
+    <TextView
+        android:id="@+id/phoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/contactImageView"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+        tools:text="+1-202-555-0123" />
+
+    <TextView
+        android:id="@+id/officeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextView"
+        tools:layout_editor_absoluteX="188dp"
+        tools:text="Oficina" />
+
+
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/call_button_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/messageButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactImageView"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/messageButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/message_button_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/emailButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/callButton"
+        app:layout_constraintTop_toBottomOf="@+id/contactImageView"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/email_button_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/contactImageView"
+        app:layout_constraintWidth_percent="0.4"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/whatsappButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/whatsapp_button_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/callButton"
+        app:layout_constraintWidth_percent="0.4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
